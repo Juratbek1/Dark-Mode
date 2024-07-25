@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        label{
+            width: 400px;
+            height: 250px;
+        }
+        .conter{
+            left: 500px;
+        }
+        main
+        {
+            margin: 5vh 15%;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+        }
+        img {
+            width: 500px; ;
+            height: 500px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 400px;
+        }
+        p {
+            text-align: justify;
+            font-size: 18px;
+        }
+        label{
+            position: absolute;
+            width: 45px;
+            height: 20px;
+            right: 20px;
+            top: 20px;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+        label:before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            left: 1px;
+            top: 1px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: #000;
+            transition: 0.4s;
+        }
+        label.active:before {
+            left: 25px;
+            background-color: #fff;
+        }
+        body.night{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <label id="dark-mode"></label>
+    </header>
+
+    <main>
+        <h1>Dark mode</h1>
+        <div id="respon">
+            <img src="HD-wallpaper-peter-parker-spiderman-amoled.jpg" alt="">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aliquid doloremque harum facilis. Id, voluptatum? Temporibus, non esse. Sapiente, harum. Officiis molestiae pariatur nihil quas tenetur aut, aliquid aspernatur animi doloremque tempora exercitationem quod ipsa esse officia commodi. Nobis, libero.</p>
+        </div>
+    </main>
+    <script>
+        var content = document.getElementsByTagName('body')[0];
+        var darkmode = document.getElementById('dark-mode');
+        darkmode.addEventListener('click', function(){
+            darkmode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+    </script>
+</body>
+</html>
